@@ -1,7 +1,5 @@
-// import LoginForm from "./LoginForm";
 import { Divider, Grid } from "@material-ui/core";
-// import SignIn from "./FormTeste";
-import LoginForm from "./LoginForm";
+import SimpleForm from "./SimpleForm";
 
 export default function LoginBox() {
   return (
@@ -10,16 +8,15 @@ export default function LoginBox() {
         container
         spacing={8}
         alignItems="center"
-        justifyContent="center"
-        style={{ maxWidth: "70%", height: "600px", background: "red" }}
+        justifyContent="space-around"
+        style={{ maxWidth: "70%", height: "600px", background: "#ffffff" }}
       >
         <Grid item>
           <img src="/logo-xtrategie.png" alt="logo" />
         </Grid>
-        <Divider orientation="vertical" flexItem />
+        <Divider orientation="vertical"/>
         <Grid item>
-          <LoginForm />
-          {/* <SignIn /> */}
+          <SimpleForm />
         </Grid>
       </Grid>
     </>

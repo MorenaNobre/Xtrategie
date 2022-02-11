@@ -1,5 +1,4 @@
 import { Grid } from "@material-ui/core";
-// import SignIn from "./FormTeste";
 import LoginBox from "./LoginBox";
 
 export default function MainContainer() {
@@ -19,7 +18,6 @@ export default function MainContainer() {
         }}
       >
         <LoginBox />
-        {/* <SignIn /> */}
       </Grid>
     </>
   );
