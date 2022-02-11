@@ -43,11 +43,12 @@ export default function SimpleForm() {
   return (
     <>
       <Box
-        // maxWidth="md"
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          marginRight: "82px",
+          marginLeft: "-82px",
         }}
       >
         <Typography
@@ -66,6 +67,7 @@ export default function SimpleForm() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            width: "350px"
           }}
         >
           <TextField
@@ -89,6 +91,7 @@ export default function SimpleForm() {
           <FormControl
             variant="filled"
             margin="dense"
+            fullWidth
           >
             <InputLabel htmlFor="filled-adornment-password">
               Password

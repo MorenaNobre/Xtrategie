@@ -1,4 +1,4 @@
-import { Divider, Grid } from "@material-ui/core";
+import { Box, Divider, Grid } from "@material-ui/core";
 import SimpleForm from "./SimpleForm";
 
 export default function LoginBox() {
@@ -6,18 +6,27 @@ export default function LoginBox() {
     <>
       <Grid
         container
-        spacing={8}
         alignItems="center"
         justifyContent="space-around"
-        style={{ maxWidth: "70%", height: "600px", background: "#ffffff" }}
+        style={{
+          maxWidth: "70%",
+          height: "600px",
+          background: "#ffffff",
+          borderRadius: "12px",
+          boxShadow: "7px 9px 20px -6px rgba(0,0,0,0.4)",
+        }}
       >
-        <Grid item>
-          <img src="/logo-xtrategie.png" alt="logo" />
-        </Grid>
-        <Divider orientation="vertical"/>
-        <Grid item>
+        <Box>
+          <img
+            src="/logo-xtrategie.png"
+            alt="logo"
+            style={{ marginRight: "-80px" }}
+          />
+        </Box>
+        <Divider orientation="vertical" style={{ height: "500px" }} />
+        <Box>
           <SimpleForm />
-        </Grid>
+        </Box>
       </Grid>
     </>
   );
