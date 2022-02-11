@@ -1,4 +1,4 @@
-import { Box, Divider, Grid } from "@material-ui/core";
+import { Box, Divider, Grid, Typography } from "@material-ui/core";
 import SimpleForm from "./SimpleForm";
 
 export default function LoginBox() {
@@ -23,11 +23,20 @@ export default function LoginBox() {
             style={{ marginRight: "-80px" }}
           />
         </Box>
-        <Divider orientation="vertical" style={{ height: "500px" }} />
+        <Divider orientation="vertical" style={{ height: "500px", width: "3px" }}/>
         <Box>
           <SimpleForm />
         </Box>
       </Grid>
+      <Typography
+        variant="h6"
+        style={{ marginTop: "32px", fontWeight: "normal" }}
+      >
+        © Software Powerd by Xtrategie
+      </Typography>
+      <Typography variant="h6" style={{ fontWeight: "normal" }}>
+        2009-2022
+      </Typography>
     </>
   );
 }

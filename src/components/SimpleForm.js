@@ -67,7 +67,7 @@ export default function SimpleForm() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            width: "350px"
+            width: "350px",
           }}
         >
           <TextField
@@ -81,6 +81,7 @@ export default function SimpleForm() {
             {...register("email", {
               required: "Campo obrigatório",
               pattern: {
+                // Regex encontrado em um tutorial no youtube (pesquisar sobre Regex)
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                 message: "E-mail inválido",
               },
@@ -88,13 +89,10 @@ export default function SimpleForm() {
             error={!!errors?.email}
             helperText={errors?.email ? errors.email.message : null}
           />
-          <FormControl
-            variant="filled"
-            margin="dense"
-            fullWidth
-          >
+          {/* Não encontrei uma forma de colocar o campo abaixo de senha como um campo obrigatório (pesquisar mais) */}
+          <FormControl variant="filled" margin="dense" fullWidth>
             <InputLabel htmlFor="filled-adornment-password">
-              Password
+              Senha
             </InputLabel>
             <FilledInput
               id="filled-adornment-password"
@@ -109,14 +107,18 @@ export default function SimpleForm() {
                     onMouseDown={handleMouseDownPassword}
                     edge="end"
                   >
-                    {values.showPassword ? < Visibility/> : <VisibilityOff />}
+                    {values.showPassword ? <Visibility /> : <VisibilityOff />}
                   </IconButton>
                 </InputAdornment>
               }
             />
           </FormControl>
           <FormControl style={{ marginTop: "30px" }}>
-            <Button type="submit" variant="outlined" size="medium">
+            <Button
+              type="submit"
+              variant="outlined"
+              style={{ width: "250px", border: "1px solid #379D8C", color: "#379D8C" }}
+            >
               Entrar
             </Button>
           </FormControl>
